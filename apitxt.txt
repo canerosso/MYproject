@@ -1,0 +1,341 @@
+--- Index ---
+
+1. User Registration
+2. My Profile
+3. Update Profile 
+4. Get Category;
+5. Get Sub Category 
+6. Get question 
+7. Submit answer
+8. Get Topper
+
+
+
+#----- API KEY Value: 145236 -----#
+#----- Base URL : http://testifymobintia.com/Mobiquiz/api/     -----#
+
+1.  User Registration :
+
+URL: users/index.php/register_user 
+
+Request Type : POST
+Request Parameters : 
+    1. api_key
+    2. name
+    2. email
+    3. isMobile
+    4. mobile
+    5.user_type (SEND 0 for user);
+    6.regId
+         
+Response type : JSON
+
+Response
+
+
+{
+
+ "status":200,"
+ message":"Register Successfully",
+"user":
+    { 
+      	"id":"105",
+     	"name":"Half Boiled",
+	    "mobile":"9860150435",
+	    "email":"manish.dhapse@mobintia.in"
+    }
+}
+
+// ERROR RESPONSE
+
+{
+    "status":400,
+    "message":"Invalid apikey"
+}
+
+{
+    "status":400,
+    "message":"Error while Registering"
+}
+
+
+
+2. My Profile :
+
+URL: users/index.php/myprofile/id/apikey/isMobile
+
+Request Type : GET
+Request Parameters : 
+    1. id
+    2. api_key
+    3. isMobile
+Response type : JSON
+
+Response
+
+{
+    "status": 200,
+    "message": "User Details",
+    "user": {
+        "id": "10",
+        "name": "Super Admin Starsss",
+        "mobile": "7147257858",
+        "email": "superadmin@tfin.com",
+        "image": "NA"
+    },
+    "mypoint": {
+        "score": "210"
+    }
+}
+// ERROR RESPONSE
+
+{
+    "status":400,
+    "message":"Invalid apikey"
+}
+
+{
+	"status":400,
+	"message":" Error while Getting Profile"
+}
+
+3. Update Profile :
+
+URL: users/index.php/update_user
+
+Request Type : POST
+Request Parameters : 
+    1. api_key
+    2. name
+    2. email
+    3. isMobile
+    4. mobile
+    5. id;
+    6.file(file_type) //for image
+         
+Response type : JSON
+// VALID RESPONSE
+{
+    "status": 200,
+    "message": "Updated Successfully"
+}
+// ERROR RESPONSE
+{
+    "status":400,
+    "message":"Invalid apikey"
+}
+{
+    "status":400,
+    "message":"Email or Phone Number Already Exits"
+}
+{
+    "status":400,
+    "message":"File is not an image"
+}
+{
+    "status":400,
+    "message":"Sorry, your file is too large"
+}
+{
+    "status":400,
+    "message":"File Type Not Allowed"
+}
+
+
+4. Get Category :
+
+URL: sub/index.php/getcat   
+
+Request Type : POST
+Request Parameters : 
+    1. api_key
+    2. isMobile
+
+Response type : JSON
+  
+// VALID RESPONSE
+{
+	"status": 200,
+	"message": "Category",
+	"category": {
+		"cat_id": "2",
+		"cat_name": "biology"
+	},
+	{
+		"cat_id": "4",
+		"cat_name": "chemistry"
+	},
+	{
+		"cat_id": "5",
+		"cat_name": "Math"
+	}
+}
+// ERROR RESPONSE
+{
+    "status":400,
+    "message":"Invalid apikey"
+}
+
+
+5. Get Sub Category :
+
+URL: top/index.php/gettop
+
+Request Type : POST
+Request Parameters : 
+    1. api_key
+    2. isMobile
+    3.id(id of category)
+
+
+Response type : JSON
+  
+// VALID RESPONSE
+
+{
+	"status": 200,
+	"message": "Topic",
+	"topic": {
+		"cat_id": "6",
+		"cat_name": "Trignonty"
+	}
+}
+
+// ERROR RESPONSE
+{
+    "status":400,
+    "message":"Invalid apikey"
+}
+
+
+6. Get question :
+
+URL: question/index.php/getquestion   
+
+Request Type : POST
+Request Parameters : 
+    1. api_key
+    2. isMobile
+    3. topic_id
+    3. limit
+
+Response type : JSON
+  
+// VALID RESPONSE
+
+ {
+ 	"status": 200,
+ 	"message": "question",
+ 	"questionic": [{
+ 		"id": "27",
+ 		"question": "checking for answer",
+ 		"options": [{
+ 			"choice_id": "16",
+ 			"choice": "now()",
+ 			"is_right": "1"
+ 		}, {
+ 			"choice_id": "17",
+ 			"choice": "the()",
+ 			"is_right": "0"
+ 		}, {
+ 			"choice_id": "18",
+ 			"choice": "taken",
+ 			"is_right": "0"
+ 		}, {
+ 			"choice_id": "19",
+ 			"choice": "check 4",
+ 			"is_right": "1"
+ 		}, {
+ 			"choice_id": "20",
+ 			"choice": "check 5",
+ 			"is_right": "0"
+ 		}]
+ 	}, {
+ 		"id": "28",
+ 		"question": "what is php",
+ 		"options": [{
+ 			"choice_id": "21",
+ 			"choice": "server script",
+ 			"is_right": "1"
+ 		}, {
+ 			"choice_id": "22",
+ 			"choice": "html",
+ 			"is_right": "0"
+ 		}, {
+ 			"choice_id": "23",
+ 			"choice": "html",
+ 			"is_right": "0"
+ 		}, {
+ 			"choice_id": "24",
+ 			"choice": "html",
+ 			"is_right": "0"
+ 		}, {
+ 			"choice_id": "25",
+ 			"choice": "html",
+ 			"is_right": "0"
+ 		}]
+ 	}]
+ }
+
+7. Submit answer :
+
+URL: question/index.php/submitanswer   
+
+Request Type : POST
+Request Parameters : 
+    1. api_key
+    2. isMobile
+    3. topic_id
+    3. user_id
+    4. score
+ 
+
+Response type : JSON
+  
+// VALID RESPONSE
+{
+    "status": 200,
+    "message": "Paper Submitted Sucessfully"
+}
+// ERROR RESPONSE
+{
+    "status":400,
+    "message":"Invalid apikey"
+}
+
+{
+    "status": 400,
+    "message": "Error While Submitting Paper"
+}
+
+8. Get Topper
+
+URL : users/index.php/get_topper
+
+Request Type : POST
+Request Parameters : 
+    1. api_key
+    2. isMobile
+
+//VALID RESPONSE
+
+{
+    "status": 200,
+    "message": "Top Five Toppers",
+    "toper": [{
+        "user_id": "120",
+        "name": "abhinay",
+        "score": "300"
+    }, {
+        "user_id": "10",
+        "name": "Super Admin Starsss",
+        "score": "210"
+    }]
+}
+
+
+// ERROR RESPONSE
+{
+    "status":400,
+    "message":"Invalid apikey"
+}

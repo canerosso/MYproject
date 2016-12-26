@@ -1,0 +1,10 @@
+[20-Nov-2015 10:31:44 Etc/GMT] PHP Parse error:  syntax error, unexpected 'public' (T_PUBLIC) in /home/mobintiard/public_html/tfin/include/Superadmin.php on line 128
+[20-Nov-2015 10:33:01 Etc/GMT] PHP Parse error:  syntax error, unexpected 'public' (T_PUBLIC) in /home/mobintiard/public_html/tfin/include/Superadmin.php on line 128
+[20-Nov-2015 10:34:47 Etc/GMT] PHP Strict Standards:  Declaration of Superadmin::signUpUser() should be compatible with Controller::SignUpUser($username, $mobile, $email, $password, $userType) in /home/mobintiard/public_html/tfin/include/Superadmin.php on line 12
+[20-Nov-2015 10:35:47 Etc/GMT] PHP Strict Standards:  Declaration of Superadmin::signUpUser() should be compatible with Controller::SignUpUser($username, $mobile, $email, $password, $userType) in /home/mobintiard/public_html/tfin/include/Superadmin.php on line 12
+[20-Nov-2015 10:36:42 Etc/GMT] PHP Strict Standards:  Declaration of Superadmin::signUpUser() should be compatible with Controller::SignUpUser($username, $mobile, $email, $password, $userType) in /home/mobintiard/public_html/tfin/include/Superadmin.php on line 12
+[20-Nov-2015 10:39:28 Etc/GMT] PHP Strict Standards:  Declaration of Superadmin::signUpUser() should be compatible with Controller::SignUpUser($username, $mobile, $email, $password, $userType) in /home/mobintiard/public_html/tfin/include/Superadmin.php on line 12
+[20-Nov-2015 10:40:22 Etc/GMT] PHP Parse error:  syntax error, unexpected ')' in /home/mobintiard/public_html/tfin/api/superadmin/index.php on line 137
+[20-Nov-2015 10:40:50 Etc/GMT] PHP Parse error:  syntax error, unexpected ')' in /home/mobintiard/public_html/tfin/api/superadmin/index.php on line 137
+[20-Nov-2015 10:42:14 Etc/GMT] PHP Parse error:  syntax error, unexpected '}' in /home/mobintiard/public_html/tfin/api/superadmin/index.php on line 135
+[20-Nov-2015 10:43:05 Etc/GMT] PHP Strict Standards:  Declaration of Superadmin::signUpUser() should be compatible with Controller::SignUpUser($username, $mobile, $email, $password, $userType) in /home/mobintiard/public_html/tfin/include/Superadmin.php on line 12
